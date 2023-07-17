@@ -1,5 +1,6 @@
 package com.example.digitalmenu.models;
 
+import com.example.digitalmenu.dtos.FoodRequestDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -27,4 +28,10 @@ public class Food {
 
     @Column(precision=9, scale=2)
     private Double price;
+
+    public Food(FoodRequestDTO data) {
+        this.image = data.image();
+        this.price = data.price();
+        this.title = data.title();
+    }
 }
