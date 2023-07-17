@@ -1,0 +1,6 @@
+CREATE table IF NOT EXISTS foods (
+	id BIGSERIAL PRIMARY KEY,
+	title VARCHAR(100),
+	price NUMERIC(9, 2),
+	image VARCHAR(500)
+);
