@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  db_dev:
+    image: postgres:15.3
+    container_name: digitalmenu_dev
+    restart: always
+    environment:
+      POSTGRES_DB: digitalmenu
+      POSTGRES_PASSWORD: postgres123
+    ports:
+      - "5435:5432"
+    volumes:
+      - .docker/postgres/data:/var/lib/postgresql
