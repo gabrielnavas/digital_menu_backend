@@ -1,4 +1,6 @@
 package com.example.digitalmenu.dtos;
 
-public record FoodRequestDTO(String title, String image, Double price) {
+import java.math.BigDecimal;
+
+public record FoodRequestDTO(String title, String image, BigDecimal price) {
 }

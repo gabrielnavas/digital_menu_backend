@@ -7,6 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Table(name="foods")
 @Entity(name="foods")
 @Getter
@@ -25,9 +27,8 @@ public class Food {
     @Column(length = 500)
     private String image;
 
-
-    @Column(precision=9, scale=2)
-    private Double price;
+    @Column(name = "price", precision = 9, scale = 2)
+    private BigDecimal price;
 
     public Food(FoodRequestDTO data) {
         this.image = data.image();
